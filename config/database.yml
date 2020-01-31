@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: whisper_development
+test:
+  <<: *default
+  database: whisper_test
+production:
+  <<: *default
+  database: whisper_production
+  username: whisper
+  password: <%= ENV['WHISPER_DATABASE_PASSWORD'] %>
