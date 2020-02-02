@@ -1,5 +1,9 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+html{position: relative;
+  min-height:100%;
+
+}
 a:hover{
     text-decoration:none;
 }
@@ -29,4 +33,27 @@ a:hover{
 }
 .bottom .copyright p, .bottom .copyright a:hover{
     color: #6c6d83;
+}
+
+body {
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.btn {
+  background-color: #C0C0C0;
+}
+.blog_content{
+  word-break: normal;
+
+}
+input[type="text"] {
+  width: 1000px;
+  height: 100px;
+  word-break: normal;
 }

@@ -40,7 +40,7 @@ before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def destroy
     @blog.destroy
-  redirect_to blogs_path, notice:"whisperを削除しました！"
+    redirect_to blogs_path, notice:"whisperを削除しました！"
   end
 
   def confirm
@@ -55,7 +55,7 @@ before_action :set_blog, only: [:show, :edit, :update, :destroy]
   end
 
   def set_blog
-  @blog = Blog.find(params[:id])
+    @blog = Blog.find(params[:id])
   end
 
 end
