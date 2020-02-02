@@ -1,17 +1,17 @@
 <h1>whisper内容編集</h1>
-<%= form_with(model: @blog, local: true) do |form| %>
-<% if @blog.errors.any? %>
+<%= form_with(model: @tweet, local: true) do |form| %>
+<% if @tweet.errors.any? %>
   <div id="error_explanation">
-    <h2><%= @blog.errors.count %>件のエラーがあります。</h2>
+    <h2><%= @tweet.errors.count %>件のエラーがあります。</h2>
     <ul>
 
-    <% @blog.errors.full_messages.each do |msg| %>
+    <% @tweet.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>
   </div>
 <% end %>
-  <div class="blog_content">
+  <div class="tweet_content">
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>

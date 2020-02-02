@@ -1,9 +1,9 @@
-module BlogsHelper
+module TweetsHelper
   def choose_new_or_edit
     if action_name == 'new' || action_name == 'confirm' || action_name == 'create'
-      confirm_blogs_path
+      confirm_tweets_path
     elsif action_name == 'edit'
-      blog_path
+      tweet_path
     end
   end
 end
