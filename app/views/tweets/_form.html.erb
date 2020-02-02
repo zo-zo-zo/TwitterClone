@@ -3,7 +3,6 @@
   <div id="error_explanation">
     <h2><%= @tweet.errors.count %>件のエラーがあります。</h2>
     <ul>
-
     <% @tweet.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
@@ -16,5 +15,4 @@
   </div>
   <%= form.submit %>
 <% end %>
-
 <%= link_to "投稿一覧画面にもどる", tweets_path %>

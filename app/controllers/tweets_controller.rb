@@ -5,16 +5,14 @@ before_action :set_tweet, only: [:show, :edit, :update, :destroy]
     @tweets = Tweet.all
   end
 
-
   def edit
   end
 
   def update
-
     if @tweet.update(tweet_params)
-        redirect_to tweets_path, notice: "whisperを編集しました！"
+      redirect_to tweets_path, notice: "whisperを編集しました！"
     else
-        render :edit
+      render :edit
     end
   end
 
